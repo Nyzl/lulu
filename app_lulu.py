@@ -62,4 +62,5 @@ def next_lulu2(): #can't have the same name
 	return redirect('/main_lulu')
 
 if __name__ == "__main__":
-    app_lulu.run(debug=FLASE)
+    port = int(os.environ.get("PORT",5000))
+    app_lulu.run(host='0.0.0.0', port=port)
